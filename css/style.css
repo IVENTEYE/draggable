@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #6f36ff;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.draggable {
+    background-color: #fff;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+}
+
+.draggable__header {
+    font-size: 23px;
+    font-weight: 500;
+    color: #6f36ff;
+    padding: 17px 30px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.draggable__header.active {
+    cursor: move;
+    user-select: none;
+}
+
+.draggable__content {
+    margin: 30px 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.draggable__icon {
+    width: 95px;
+    height: 95px;
+    border: 5px solid #6f36ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.draggable__icon::before {
+    content: '';
+    background: url('../img/move.svg') no-repeat;
+    width: 45px;
+    height: 45px;
+}
+
+.draggable__title {
+    font-size: 29px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.draggable__text {
+    font-size: 16px;
+    text-align: center;
+}
